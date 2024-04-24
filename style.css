@@ -736,7 +736,6 @@ footer span a:hover {
   height: 40px;
   background-color: #337ab7;
   color: #fff;
-
   transition: background-color 0.3s ease;
 }
 
@@ -1178,6 +1177,9 @@ textarea.input {
 @media (max-width: 850px) {
   .form {
     grid-template-columns: 1fr;
+    height: fit-content;
+    width: fit-content;
+    margin-left: -15vw;
   }
 
   .contact-info:before {
@@ -1216,6 +1218,8 @@ textarea.input {
 @media (max-width: 480px) {
   .container {
     padding: 1.5rem;
+    height: 100vh;
+    width: 100vw;
   }
 
   .contact-info:before {
