@@ -37,7 +37,7 @@ $(document).ready(function () {
   var typed = new Typed(".typing", {
     strings: [
       "Front End devloper",
-      "Web Developes",
+      "Web Developer",
       "Designer",
       "Full stack devloper",
     ],
