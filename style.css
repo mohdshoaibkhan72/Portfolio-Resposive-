@@ -133,7 +133,7 @@ section .title::after {
   font-weight: 600;
 }
 .navbar .logo a span {
-  color: #6e6e6e;
+  color: #1abc9c;
   transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span {
@@ -152,7 +152,7 @@ section .title::after {
   transition: color 0.3s ease;
 }
 .navbar .menu li a:hover {
-  color: #6e6e6e;
+  color: #1abc9c;
 }
 .navbar.sticky .menu li a:hover {
   color: #fff;
@@ -219,6 +219,7 @@ section .title::after {
 .home .home-content .text-2 {
   font-size: 75px;
   font-weight: 600;
+  color: #149279;
   margin-left: -3px;
 }
 .home .home-content .text-3 {
@@ -228,6 +229,7 @@ section .title::after {
 .home .home-content .text-3 span {
   color: #6e6e6e;
   font-weight: 500;
+  color: #149279;
 }
 .home .home-content a {
   display: inline-block;
@@ -247,13 +249,16 @@ section .title::after {
 }
 
 /* about section styling */
+
 .about .title::after {
+  color: #1abc9c;
   content: "who I am";
 }
-.about .about-content .left {
-  width: 45%;
+.about h2 {
+  color: black;
+  font-weight: 500;
 }
-.about .about-content .left img {
+.about-content .left img {
   height: 400px;
   width: 400px;
   object-fit: cover;
@@ -265,10 +270,9 @@ section .title::after {
 .about .about-content .right .text {
   font-size: 25px;
   font-weight: 600;
-  margin-bottom: 10px;
 }
 .about .about-content .right .text span {
-  color: #6e6e6e;
+  color: #1abc9c;
 }
 .about .about-content .right p {
   text-align: justify;
@@ -295,6 +299,9 @@ section .title::after {
 .teams {
   color: #fff;
   background: #111;
+}
+.services .title {
+  color: #1abc9c;
 }
 .services .title::before,
 .teams .title::before {
@@ -333,6 +340,7 @@ section .title::after {
 }
 .services .serv-content .card .text {
   font-size: 25px;
+  color: #1abc9c;
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
@@ -341,6 +349,11 @@ section .title::after {
 
 .skills .title::after {
   content: "what I know";
+  color: #1abc9c;
+}
+.skills h2 {
+  color: #000;
+  font-weight: 500;
 }
 .skills .skills-content .column {
   width: calc(50% - 30px);
@@ -394,7 +407,7 @@ section .title::after {
   height: 100%;
   left: 0;
   top: 0;
-  background: #6e6e6e;
+  background: #1abc9c;
 }
 .skills-content .right .html::before {
   width: 90%;
@@ -415,6 +428,9 @@ section .title::after {
 /* teams section styling */
 .teams .title::after {
   content: "what I made";
+}
+.teams .title {
+  color: #1abc9c;
 }
 .teams .carousel .card {
   background: #222;
@@ -440,6 +456,7 @@ section .title::after {
 .teams .carousel .card .text {
   font-size: 25px;
   font-weight: 500;
+  color: #1abc9c;
   margin: 10px 0 7px 0;
 }
 .teams .carousel .card img {
@@ -587,12 +604,6 @@ footer span a:hover {
 }
 
 /* responsive media query start */
-@media (max-width: 1104px) {
-  .about .about-content .left img {
-    height: 350px;
-    width: 350px;
-  }
-}
 
 @media (max-width: 991px) {
   .max-width {
@@ -785,9 +796,11 @@ hr {
 /* Default styles for larger screens */
 .social-menu ul {
   position: relative;
-  margin-top: 38.65979381443299vh;
+  top: 37vh;
+  left: -45vw;
   display: flex;
-  margin-left: -87vh;
+  margin: 10px;
+  gap: 10px;
 }
 
 .social-menu ul li {
@@ -836,20 +849,15 @@ hr {
 }
 
 /* Responsive styles for smaller screens */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 725px) {
   .social-menu ul {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding-top: 40vh;
-    margin-right: auto;
-    margin: 0;
-    /* Remove negative margin for better centering */
+    position: absolute;
+    left: 6vw;
+    top: 73vh;
   }
 
   .social-menu ul li {
-    margin: 0 5px; /* Adjust margin for smaller screens */
+    margin: 5px 5px;
   }
 
   .social-menu ul li .fab {
@@ -861,15 +869,6 @@ hr {
     width: 40px;
     height: 40px;
     line-height: 40px;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .social-menu ul {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 1vh;
   }
 }
 
@@ -1205,7 +1204,9 @@ textarea.input {
     transform: scale(0.9) translate(-40%, 30%);
     right: 50%;
   }
-
+  .about .about-content img {
+    width: 90vw;
+  }
   .text {
     margin: 1rem 0 1.5rem 0;
   }
@@ -1221,11 +1222,18 @@ textarea.input {
     height: 100vh;
     width: 100vw;
   }
-
+  .home .home-content .text-2 {
+    color: #149279;
+  }
+  .about-content img {
+    width: 90vw;
+  }
   .contact-info:before {
     display: none;
   }
-
+  .about .about-content img {
+    width: 100vw;
+  }
   .square,
   .big-circle {
     display: none;
